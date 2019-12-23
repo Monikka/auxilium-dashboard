@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans-serif);
+}
+
+.headerContainer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-right: 0;
+  margin-bottom: 1vh;
+}
+
+#aux-logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.siteTitle {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  text-shadow: 0px 4px 4px rgba(0, 102, 255, 0.25);
+  color: var(--primary);
+  font-size: 3rem;
+  padding-top: 17px; /** how to align all the header elements perfectly in a line? */
+}
+
+.companyLogo {
+  max-width: 180px;
+  max-height: 50px;
+  width: 100%;
+  height: auto;
+  justify-self: end;
+}
+
+/** TODO: Figure out why this doesn't work */
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.display-flex > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.is-table-row {
+  display: table;
+}
+
+.is-table-row [class*="col-"] {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.content {
+  background-color: #eaeff7;
+}
+
+.numberCircle {
+  border-radius: 50%;
+
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+
+  background: var(--primary-light);
+  border: 0em solid #666;
+  color: var(--primary);
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.nav-tab-decoration {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0;
+}
+
+a.sub-nav-tab-decoration {
+  font-weight: 400;
+}
+
+a.sub-nav-tab-decoration:hover {
+  border-bottom: 5px solid var(--primary-light);
+  text-decoration: none;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+
+a.nav-tab-decoration:hover {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.bg-theme {
+  background-color: var(--primary);
+}
+
+.text-color-theme-yellow {
+  color: var(--secondary);
+}
+
+.sub-nav-tab-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.ResponsesContainer .row:last-child {
+  margin-bottom: 20px;
+}
+
+.ReactTable {
+  border-top-width: 0;
+}
+.ReactTable.-striped .rt-tr.-odd {
+  background: rgba(208, 225, 249, 0.5);
+}
+
+.ReactTable.-highlight .rt-tbody .rt-tr:not(.-padRow):hover {
+  background: rgba(235, 204, 96, 0.25);
+}
+
+.ReactTable .rt-thead.-header {
+  box-shadow: 0 0 15px 0 rgba(208, 225, 249, 0.61);
+}
+
+.ReactTable .-pagination {
+  box-shadow: 0 0 15px 0 rgba(208, 225, 249, 0.61);
+  border-top: 2px solid rgba(208, 225, 249, 0.61);
+}
+
+.footerContainer {
+  float: bottom;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+}
+
+.footerContainer.a {
+  color: var(--secondary);
+}
+
+.footerContainer a:hover {
+  color: var(--secondary);
+}
+
+.companyLogoWhite {
+  width: 30%;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row.row:after,
+.flex-row.row:before {
+  display: flex;
+}
+
+.dashboardUnits {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.navbar-nav {
+  height: 8vh;
+  align-items: center;
+}
+
+.th {
+  color: "#7C7C7C";
+}
+
+.chartHeight {
+  height: 300px;
+}
+
+.responsive-image {
+  width: 120px;
+  height: 45px;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: var(--breakpoint-xs)) {
+  .dashboardUnits {
+    flex-direction: column;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: var(--breakpoint-sm)) {
+  .dashboardUnits {
+    flex-direction: row;
+  }
+
+  .footerContainer {
+    flex-direction: row;
+  }
+
+  body {
+    font-size: 1.25rem;
+  }
+  .tooltip {
+    font-size: 1rem;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: var(--breakpoint-md)) {
+  .dashboardUnits {
+    flex-direction: row;
+  }
+
+  .footerContainer {
+    flex-direction: row;
+  }
+
+  body {
+    font-size: 1.3rem;
+  }
+  .tooltip {
+    font-size: 1rem;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: var(--breakpoint-lg)) {
+  .footerContainer {
+    flex-direction: row;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  .tooltip {
+    font-size: 1.3rem;
+  }
+}
